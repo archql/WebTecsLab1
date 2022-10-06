@@ -8,6 +8,19 @@ public class Book implements Comparable<Book> {
     private int price;
     private static int edition;
 
+    Book() {
+    }
+
+    Book(String title, int price) {
+        this.title = title;
+        this.price = price;
+    }
+
+    Book(String title, String author, int price) {
+        this(title, price);
+        this.author = author;
+    }
+
     public String getTitle() {
         return title;
     }
